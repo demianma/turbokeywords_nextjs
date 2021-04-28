@@ -1,4 +1,4 @@
-// add bootstrap css 
+// add bootstrap css f
 import 'bootstrap/dist/css/bootstrap.css'
 
 function Home() {
