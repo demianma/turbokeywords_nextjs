@@ -1,8 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.css'
 
 function Home() {
-    return ( 
-        <div class='row m-3 shadow'>
+    return  <div class='row m-3 shadow'>
         {/* left column -> data input */}
         <div class='col-md-3 p-3 border'>
 
@@ -57,7 +56,7 @@ function Home() {
                 <div class='h5'>Resultados</div>
             </div>
         </div>
-        )
+        
 }
 
 export default Home;
