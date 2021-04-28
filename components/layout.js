@@ -2,7 +2,6 @@
 
 import 'bootstrap/dist/css/bootstrap.css'
 import Head from 'next/head'
-import styles from './layout.module.css'
 import Header from './header'
 import Footer from './footer'
 
@@ -16,7 +15,6 @@ export default function Layout({ children }) {
         
         <Header />
 
-        {/* <div className={styles.container}>{children}</div> */}
         <div class='row shadow m-3'>{children}</div>
 
         <Footer />
