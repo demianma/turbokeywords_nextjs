@@ -1,0 +1,10 @@
+/* CSS global, que eh puxado pelo layout.js e cascateia pra todo mundo */
+
+/* .container {
+  padding: 0 1rem;
+  margin: 3rem;
+} */
+
+.fundo {
+  background-color: #A53F2B;
+}
