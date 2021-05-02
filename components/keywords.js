@@ -1,5 +1,6 @@
 import useSWR from 'swr'
 import Error from 'next/error'
+import {useState} from 'react'
 
 //function fetcher await
 const fetcher = (...args) => fetch(...args).then(res => res.json())
@@ -20,7 +21,7 @@ function fetchFBkeywords (keyword) {
       }
 }
 
-//lado da direita - resultados
+//render lado da direita - resultados
 function Results(keyword) {
 
     const { response, isLoading, isError } = fetchFBkeywords(keyword)
@@ -36,26 +37,50 @@ function Results(keyword) {
     )
 }
 
-function Search (event) {
-    event.preventDefault();
-    console.log("clique")
-    const keyword = "Gatos";
-    Results(keyword); //GERA UM ERRO DE HOOS CAN ONLY BE CALLED INSED A BODY OF A FUNCTION
-}
+// function Search (event) {
+//     event.preventDefault();
+//     console.log("clique")
+//     const keyword = "Gatos";
+//     Results(keyword); //GERA UM ERRO DE HOOS CAN ONLY BE CALLED INSED A BODY OF A FUNCTION
+// }
 
 
-//lado da esquerda - entrada de dados
+/*
+
+USEI AS INSTRUCOES DO DESCHJAPS PARA CRIAR UM useState QUE ATUALIZA A VAR
+searchTerm com a funcoao setsearchTerm. Eu precis ochamar essa funcao cada
+vez qeu eu quiser atualizar a variavel.
+
+agora precisa ver como obter os dados de dentro do campo do formulario
+para poder usar em algum lugar. 
+
+Também pretendo colocar o buscador do facebook pra rodar server-side a fim
+de proteger o codigo e devlver esse negocio apra a interface. sei lá como.
+
+*/
+
+
+//render lado da esquerda - entrada de dados
  export default function Keywords() {
+
+    const initialState = "ex.: Gatos"
+    const [searchTerm, setsearchTerm] = useState(initialState);
+
+    function Search()
+    {
+        setsearchTerm("novo")
+        console.log ("cliquei no botao" , searchTerm)
+        return null
+    }
 
     return (
         <div className="row">
             <div className='col-md-3 p-3 border'>
                 <div className='h5'>Busca</div>
-                <form onSubmit={Search}>
-
+                {/* <form> */}
                     <div className='mb-3'>
                         <label htmlFor='fkeyword' className='form-label'>Interesse</label>
-                        <input type='text' className='form-control' id='fkeyword' placeholder='ex. Peixe'
+                        <input type='text' className='form-control' id='fkeyword' placeholder={searchTerm}
                         aria-label='Interesse' required></input>
                     </div>
 
@@ -70,9 +95,9 @@ function Search (event) {
                     </div>
 
                     <div className='d-grid gap-2'>
-                        <button type="submit" id='btnBuscar' className='btn btn-success'>Buscar</button>
+                        <button onClick={Search} id='btnBuscar' className='btn btn-success'>Buscar</button>
                     </div>
-                </form>
+                {/* </form> */}
 
                 <div className='mb-3 pt-3'><hr /></div>
 
