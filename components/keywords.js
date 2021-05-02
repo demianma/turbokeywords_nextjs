@@ -20,20 +20,32 @@ function fetchFBkeywords (keyword) {
       }
 }
 
+//lado da direita - resultados
+function Results(keyword) {
 
- export default function Keywords(keyword) {
-
-    //deal with form
-    const Search = event => {
-        event.preventDefault()
-        console.log("clique")
-    }
-
-    //deal with data from FB fetcher
     const { response, isLoading, isError } = fetchFBkeywords(keyword)
 
     if (isLoading) return "Carregando..."
     if (isError) return <Error />
+
+    return (
+            <div className='col-md-9 p-3 border'>
+                <div className='h5'>Resultados</div>
+                <div className='mb-3'>{JSON.stringify(response)}</div>
+            </div>
+    )
+}
+
+function Search (event) {
+    event.preventDefault();
+    console.log("clique")
+    const keyword = "Gatos";
+    Results(keyword); //GERA UM ERRO DE HOOS CAN ONLY BE CALLED INSED A BODY OF A FUNCTION
+}
+
+
+//lado da esquerda - entrada de dados
+ export default function Keywords() {
 
     return (
         <div className="row">
@@ -85,16 +97,7 @@ function fetchFBkeywords (keyword) {
                 </div>
             </div>
             {/* Coluna direita */}
-            <Results {...response} />
+            <Results />
         </div>
-    )
-}
-
-function Results (response) {
-    return (
-        <div className='col-md-9 p-3 border'>
-                <div className='h5'>Resultados</div>
-                <div className='mb-3'>{JSON.stringify(response)}</div>
-            </div>
     )
 }
