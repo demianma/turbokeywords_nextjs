@@ -1,0 +1,12 @@
+.backToHome {
+    margin: 1rem;
+    text-align: end;
+  }
+
+.backToHome a:link {
+    color: #000;
+  }
+
+.backToHome a:visited {
+    color: #000;
+  }

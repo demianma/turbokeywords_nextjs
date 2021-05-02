@@ -1,10 +1,12 @@
 import Link from 'next/link'
+import { siteTitle } from './layout'
+import { siteDescription } from './layout'
 
 export default function Header () {
     return (
         <nav className="navbar navbar-expand-sm navbar-dark sticky-top" style={{ background: '#A53F2B' }}>
             <div class="container fluid">
-                <a class="navbar-brand text-white" href='#'><strong>Turbo Keyword</strong></a>
+                <a class="navbar-brand text-white" href='#'><strong>{siteTitle}</strong></a>
                 <button 
                     class="navbar-toggler" 
                     type="button" 
@@ -16,11 +18,11 @@ export default function Header () {
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav white">
 
                         <li class="nav-item">
                             <Link href='/'>
-                                <a class="nav-link active">Home</a>
+                                <a class='nav-link'>Home</a>
                             </Link>
                         </li>
                         <li class="nav-item">
@@ -36,7 +38,7 @@ export default function Header () {
                     </ul>
                 </div>	
                 <span class="navbar-text d-none d-xl-block d-xxl-block">
-                    Localize interesses ocultos no Facebook Ads
+                    {siteDescription}
                 </span>
             </div>
         </nav>

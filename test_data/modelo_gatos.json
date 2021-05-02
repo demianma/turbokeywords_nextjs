@@ -1,0 +1,517 @@
+{
+   "data": [
+      {
+         "id": "6003159378782",
+         "name": "Gatos",
+         "audience_size": 520597330,
+         "path": [
+            "Interesses",
+            "Hobbies e atividades",
+            "Animais de estima\u00e7\u00e3o",
+            "Gatos"
+         ],
+         "description": "",
+         "topic": "Hobbies and activities"
+      },
+      {
+         "id": "6003205281847",
+         "name": "Cat food",
+         "audience_size": 30931763,
+         "path": [
+            "Interesses",
+            "Outros interesses",
+            "Cat food"
+         ],
+         "description": null
+      },
+      {
+         "id": "6003541759880",
+         "name": "Gato preto",
+         "audience_size": 12431190,
+         "path": [
+            "Interesses",
+            "Outros interesses",
+            "Gato preto"
+         ],
+         "description": null,
+         "topic": "Shopping and fashion"
+      },
+      {
+         "id": "6002963162646",
+         "name": "Gato-bravo",
+         "audience_size": 4200940,
+         "path": [
+            "Interesses",
+            "Outros interesses",
+            "Gato-bravo"
+         ],
+         "description": null,
+         "topic": "Hobbies and activities"
+      },
+      {
+         "id": "6002981848121",
+         "name": "Gato persa",
+         "audience_size": 4038550,
+         "path": [
+            "Interesses",
+            "Outros interesses",
+            "Gato persa"
+         ],
+         "description": null,
+         "disambiguation_category": "Ra\u00e7a de animal"
+      },
+      {
+         "id": "6003067287693",
+         "name": "Mulher-Gato",
+         "audience_size": 3942120,
+         "path": [
+            "Interesses",
+            "Outros interesses",
+            "Mulher-Gato"
+         ],
+         "description": null,
+         "disambiguation_category": "Personagem de filme",
+         "topic": "News and entertainment"
+      },
+      {
+         "id": "6016383011968",
+         "name": "Gato siam\u00eas",
+         "audience_size": 3777950,
+         "path": [
+            "Interesses",
+            "Outros interesses",
+            "Gato siam\u00eas"
+         ],
+         "description": null,
+         "disambiguation_category": "Ra\u00e7a de animal"
+      },
+      {
+         "id": "6003424875340",
+         "name": "Gato de pelo curto ingl\u00eas",
+         "audience_size": 3662750,
+         "path": [
+            "Interesses",
+            "Outros interesses",
+            "Gato de pelo curto ingl\u00eas"
+         ],
+         "description": null,
+         "topic": "Hobbies and activities"
+      },
+      {
+         "id": "6003137381750",
+         "name": "Top Cat",
+         "audience_size": 3636810,
+         "path": [
+            "Interesses",
+            "Outros interesses",
+            "Top Cat"
+         ],
+         "description": null,
+         "disambiguation_category": "TV e cinema",
+         "topic": "News and entertainment"
+      },
+      {
+         "id": "6016010783253",
+         "name": "Gato-de-bengala",
+         "audience_size": 2568210,
+         "path": [
+            "Interesses",
+            "Outros interesses",
+            "Gato-de-bengala"
+         ],
+         "description": null,
+         "disambiguation_category": "Ra\u00e7a de animal"
+      },
+      {
+         "id": "6003221999476",
+         "name": "Cats & Dogs",
+         "audience_size": 2535240,
+         "path": [
+            "Interesses",
+            "Outros interesses",
+            "Cats & Dogs"
+         ],
+         "description": null,
+         "disambiguation_category": "TV e cinema",
+         "topic": "News and entertainment"
+      },
+      {
+         "id": "6002937134372",
+         "name": "GATO",
+         "audience_size": 1405210,
+         "path": [
+            "Interesses",
+            "Outros interesses",
+            "GATO"
+         ],
+         "description": null,
+         "disambiguation_category": "Figura p\u00fablica",
+         "topic": "People"
+      },
+      {
+         "id": "6003029061385",
+         "name": "Lista de ra\u00e7as de gatos dom\u00e9sticos",
+         "audience_size": 1360320,
+         "path": [
+            "Interesses",
+            "Outros interesses",
+            "Lista de ra\u00e7as de gatos dom\u00e9sticos"
+         ],
+         "description": null,
+         "topic": "Hobbies and activities"
+      },
+      {
+         "id": "6003308779853",
+         "name": "Turkish Van",
+         "audience_size": 969590,
+         "path": [
+            "Interesses",
+            "Outros interesses",
+            "Turkish Van"
+         ],
+         "description": null,
+         "topic": "Hobbies and activities"
+      },
+      {
+         "id": "6003384790543",
+         "name": "Gato de Cheshire",
+         "audience_size": 808610,
+         "path": [
+            "Interesses",
+            "Outros interesses",
+            "Gato de Cheshire"
+         ],
+         "description": null,
+         "disambiguation_category": "Neg\u00f3cio local",
+         "topic": "News and entertainment"
+      },
+      {
+         "id": "6016069702895",
+         "name": "Gato Savannah",
+         "audience_size": 653770,
+         "path": [
+            "Interesses",
+            "Outros interesses",
+            "Gato Savannah"
+         ],
+         "description": null
+      },
+      {
+         "id": "6004174690424",
+         "name": "La loca de los gatos",
+         "audience_size": 645660,
+         "path": [
+            "Interesses",
+            "Outros interesses",
+            "La loca de los gatos"
+         ],
+         "description": null,
+         "disambiguation_category": "Programa de TV",
+         "topic": "News and entertainment"
+      },
+      {
+         "id": "6003201342813",
+         "name": "Felix the Cat",
+         "audience_size": 628690,
+         "path": [
+            "Interesses",
+            "Outros interesses",
+            "Felix the Cat"
+         ],
+         "description": null,
+         "disambiguation_category": "Neg\u00f3cio local",
+         "topic": "News and entertainment"
+      },
+      {
+         "id": "6003363865945",
+         "name": "Munchkin (gato)",
+         "audience_size": 545100,
+         "path": [
+            "Interesses",
+            "Outros interesses",
+            "Munchkin (gato)"
+         ],
+         "description": null,
+         "disambiguation_category": "Neg\u00f3cio local",
+         "topic": "Hobbies and activities"
+      },
+      {
+         "id": "6003197065926",
+         "name": "Associa\u00e7\u00e3o Internacional de Gatos",
+         "audience_size": 508200,
+         "path": [
+            "Interesses",
+            "Outros interesses",
+            "Associa\u00e7\u00e3o Internacional de Gatos"
+         ],
+         "description": null,
+         "disambiguation_category": "Servi\u00e7os para animais de estima\u00e7\u00e3o",
+         "topic": "Business and industry"
+      },
+      {
+         "id": "6003245976685",
+         "name": "Puss in Boots",
+         "audience_size": 465410,
+         "path": [
+            "Interesses",
+            "Outros interesses",
+            "Puss in Boots"
+         ],
+         "description": null,
+         "disambiguation_category": "Filme",
+         "topic": "News and entertainment"
+      },
+      {
+         "id": "6002976210321",
+         "name": "Climbing shoe",
+         "audience_size": 406620,
+         "path": [
+            "Interesses",
+            "Outros interesses",
+            "Climbing shoe"
+         ],
+         "description": null,
+         "disambiguation_category": "Neg\u00f3cio local",
+         "topic": "Sports and outdoors"
+      },
+      {
+         "id": "6003142698261",
+         "name": "Ex\u00f3tico",
+         "audience_size": 397250,
+         "path": [
+            "Interesses",
+            "Outros interesses",
+            "Ex\u00f3tico"
+         ],
+         "description": null,
+         "disambiguation_category": "Ra\u00e7a de animal",
+         "topic": "Hobbies and activities"
+      },
+      {
+         "id": "6003413923757",
+         "name": "Cat eye glasses",
+         "audience_size": 264040,
+         "path": [
+            "Interesses",
+            "Outros interesses",
+            "Cat eye glasses"
+         ],
+         "description": null,
+         "topic": "Lifestyle and culture"
+      },
+      {
+         "id": "6003416626677",
+         "name": "Gato de pelo curto americano",
+         "audience_size": 191960,
+         "path": [
+            "Interesses",
+            "Outros interesses",
+            "Gato de pelo curto americano"
+         ],
+         "description": null,
+         "topic": "Hobbies and activities"
+      },
+      {
+         "id": "6003137870528",
+         "name": "O Reino dos Gatos",
+         "audience_size": 188330,
+         "path": [
+            "Interesses",
+            "Outros interesses",
+            "O Reino dos Gatos"
+         ],
+         "description": null,
+         "disambiguation_category": "Neg\u00f3cio local",
+         "topic": "News and entertainment"
+      },
+      {
+         "id": "6003259356886",
+         "name": "Gatos Guerreiros",
+         "audience_size": 150250,
+         "path": [
+            "Interesses",
+            "Outros interesses",
+            "Gatos Guerreiros"
+         ],
+         "description": null,
+         "disambiguation_category": "Neg\u00f3cio local",
+         "topic": "News and entertainment"
+      },
+      {
+         "id": "6002962669972",
+         "name": "Himalaio",
+         "audience_size": 140760,
+         "path": [
+            "Interesses",
+            "Outros interesses",
+            "Himalaio"
+         ],
+         "description": null,
+         "disambiguation_category": "Neg\u00f3cio local",
+         "topic": "Hobbies and activities"
+      },
+      {
+         "id": "6003049316616",
+         "name": "Gato angor\u00e1",
+         "audience_size": 119150,
+         "path": [
+            "Interesses",
+            "Outros interesses",
+            "Gato angor\u00e1"
+         ],
+         "description": null,
+         "disambiguation_category": "Neg\u00f3cio local",
+         "topic": "Hobbies and activities"
+      },
+      {
+         "id": "6003134017658",
+         "name": "Gato abiss\u00ednio",
+         "audience_size": 114020,
+         "path": [
+            "Interesses",
+            "Outros interesses",
+            "Gato abiss\u00ednio"
+         ],
+         "description": null,
+         "topic": "Hobbies and activities"
+      },
+      {
+         "id": "6003140061668",
+         "name": "Oriental Shorthair",
+         "audience_size": 79130,
+         "path": [
+            "Interesses",
+            "Outros interesses",
+            "Oriental Shorthair"
+         ],
+         "description": null,
+         "disambiguation_category": "Ra\u00e7a de animal",
+         "topic": "Hobbies and activities"
+      },
+      {
+         "id": "6003292595411",
+         "name": "Tonquin\u00eas",
+         "audience_size": 46090,
+         "path": [
+            "Interesses",
+            "Outros interesses",
+            "Tonquin\u00eas"
+         ],
+         "description": null,
+         "topic": "Hobbies and activities"
+      },
+      {
+         "id": "6003371771043",
+         "name": "Balin\u00eas",
+         "audience_size": 29980,
+         "path": [
+            "Interesses",
+            "Outros interesses",
+            "Balin\u00eas"
+         ],
+         "description": null,
+         "disambiguation_category": "Neg\u00f3cio local",
+         "topic": "Hobbies and activities"
+      },
+      {
+         "id": "6003243611210",
+         "name": "Gato de pelo curto europeu",
+         "audience_size": 27930,
+         "path": [
+            "Interesses",
+            "Outros interesses",
+            "Gato de pelo curto europeu"
+         ],
+         "description": null,
+         "disambiguation_category": "Neg\u00f3cio local",
+         "topic": "Hobbies and activities"
+      },
+      {
+         "id": "6003201256282",
+         "name": "Diabetes em c\u00e3es e gatos",
+         "audience_size": 9220,
+         "path": [
+            "Interesses",
+            "Outros interesses",
+            "Diabetes em c\u00e3es e gatos"
+         ],
+         "description": null,
+         "topic": "Hobbies and activities"
+      },
+      {
+         "id": "6003259373682",
+         "name": "Gatos y perros.",
+         "audience_size": 7050,
+         "path": [
+            "Interesses",
+            "Outros interesses",
+            "Gatos y perros."
+         ],
+         "description": null,
+         "topic": "Travel, places and events"
+      },
+      {
+         "id": "6003634782395",
+         "name": "Gato Serengeti",
+         "audience_size": 4730,
+         "path": [
+            "Interesses",
+            "Outros interesses",
+            "Gato Serengeti"
+         ],
+         "description": null,
+         "topic": "Hobbies and activities"
+      },
+      {
+         "id": "6003337724351",
+         "name": "Gundam 0083",
+         "audience_size": 4690,
+         "path": [
+            "Interesses",
+            "Outros interesses",
+            "Gundam 0083"
+         ],
+         "description": null,
+         "disambiguation_category": "Neg\u00f3cio local",
+         "topic": "News and entertainment"
+      },
+      {
+         "id": "6003139604176",
+         "name": "O Gatola da Cartola Tem De Tudo na Cachola",
+         "audience_size": 1750,
+         "path": [
+            "Interesses",
+            "Outros interesses",
+            "O Gatola da Cartola Tem De Tudo na Cachola"
+         ],
+         "description": null,
+         "disambiguation_category": "Programa de TV",
+         "topic": "News and entertainment"
+      },
+      {
+         "id": "6002999828794",
+         "name": "Gato de Botas",
+         "audience_size": 0,
+         "path": [
+            "Interesses",
+            "Outros interesses",
+            "Gato de Botas"
+         ],
+         "description": null,
+         "disambiguation_category": "Neg\u00f3cio local",
+         "topic": "News and entertainment"
+      },
+      {
+         "id": "6003353670530",
+         "name": "Sylvester",
+         "audience_size": 0,
+         "path": [
+            "Interesses",
+            "Outros interesses",
+            "Sylvester"
+         ],
+         "description": null,
+         "topic": "News and entertainment"
+      }
+   ]
+}

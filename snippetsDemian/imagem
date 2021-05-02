@@ -1,0 +1,4 @@
+<Image priority src="/images/profile.jpg" height={108} width={108} alt={name} />
+
+priority
+Should only be used when the image is visible above the fold. Defaults to false.

@@ -1,8 +1,9 @@
 a {
-  color: #f300cb;
-  text-decoration: none;
+  color: #fff;
+  text-decoration: none !important;
 }
 
 a:hover {
   text-decoration: underline;
+  font-weight:500;
 }
