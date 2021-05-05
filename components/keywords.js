@@ -1,31 +1,36 @@
 import {useState} from 'react'
+import fetchFBkeywords from '../services/graphapi'
 import dataExample from '../test_data/modelo_gatos.json'
 
 export default function Keywords(props) {
 
-    //condicao inicial campo de busca
-     const initialState = "ex.: Gatos"
-     const [searchTerm, setsearchTerm] = useState(initialState);
+    //condicao inicial
+    const initSearchTerm = "ex.: Gatos"
+    const initModelGatos = dataExample;
 
-     const modelGatos = dataExample;
-     const [FBTable, setFBTable] = useState(modelGatos);
+    const [searchTerm, setSearchTerm] = useState(initSearchTerm);
+    const [FBTable, setFBTable] = useState(initModelGatos);
 
-     function Search() {
-
-        setFBTable(FBTable)
+    function Search() {
+        let query = {
+            "keyword": searchTerm, 
+            "lang": "pt-BR"
+        }
+        
+        setFBTable(fetchFBkeywords(query)) //tá dando Invalid Hook Call...
 
         return null
     }
 
     return (
         <div className="row">
-            <div className='col-md-3 p-3 border'>
+            <div className='col-md-3 p-5 border'>
                 <div className='h5'>Busca</div>
 
                     <div className='mb-3'>
                         <label htmlFor='fkeyword' className='form-label'>Interesse</label>
-                        <input type='text' className='form-control' id='fkeyword' placeholder={searchTerm}
-                        aria-label='Interesse' required></input>
+                        <input type='text' className='form-control' id='fkeyword' placeholder={initSearchTerm}
+                        aria-label='Interesse' onChange={event => setSearchTerm(event.target.value)} required></input>
                     </div>
 
                     <div className='mb-3'>
@@ -66,7 +71,7 @@ export default function Keywords(props) {
             </div>
             {/* Coluna direita */}
             
-            <div className='col-md-9 p-3 border'>
+            <div className='col-md-9 p-5 border'>
                 <div className='h5'>Resultados</div>
                 <table className="table table-striped">
                 <thead>
@@ -80,8 +85,10 @@ export default function Keywords(props) {
                 <tbody>
                     {/* keywords are inside '{data:...}' */}
                     {FBTable.data.map((keyword) => (
-                        <tr>
-                            <input className="form-check-input" type="checkbox" value="" id="keyword.id"></input>
+                        <tr onClick={()=>{document.getElementById(keyword.id).click()}}> 
+                            <td>
+                                <input className="form-check-input" type="checkbox" value={keyword.name} id={keyword.id}></input>
+                            </td>
                             <td>{keyword.name}</td>
                             <td>{keyword.audience_size.toLocaleString()}</td>
                             <td>{keyword.path.join(" | ")}</td>
