@@ -1,49 +1,20 @@
 import useSWR from 'swr'
-import Error from 'next/error'
 import {useState} from 'react'
+import fetchFBkeywords from '../services/graphapi'
 
-//function fetcher await
-const fetcher = (...args) => fetch(...args).then(res => res.json())
-
-//fetch FB with useSWR
-function fetchFBkeywords (keyword) {
-    
-    //const url = 'https://jsonplaceholder.typicode.com/todos/1'
-    const token = 'EAAHe0AcsY6MBAGlLPcM9bBVczujSfZAhSzi0Pi1ySbEAZAjVR1LpeYf7B9573MBVpnNYZC8u9RBQZApXv6MF2BWpdtlBnvyRDMRHgqauDYPh7xQ7YJQJpB8WqTV1TyMjXwQEcIrLZCaoCVY0QZBU7knwNf1EHkiGFI3UZCmALvPPW2V7x5fJcCW598MD6s3FSmNUZAPHrJHYHJoMTGejm0XF'
-    const url = `https://graph.facebook.com/search?type=adinterest&q=[${keyword}]&limit=10000&locale=pt_BR&access_token=${token}`
-
-    const { data, error } = useSWR(url , fetcher)
-
-    return {
-        response: data,
-        isLoading: !error && !data,
-        isError: error
-      }
-}
 
 //render lado da direita - resultados
-function Results(keyword) {
+function Results() {
+
+    const keyword = "Keyword de teste"
 
     const { response, isLoading, isError } = fetchFBkeywords(keyword)
 
-    if (isLoading) return "Carregando..."
-    if (isError) return <Error />
+    if (isLoading) return "Buscando dados..."
+    if (isError) return "Houve um erro na solicitação"
 
-    return (
-            <div className='col-md-9 p-3 border'>
-                <div className='h5'>Resultados</div>
-                <div className='mb-3'>{JSON.stringify(response)}</div>
-            </div>
-    )
+    return JSON.stringify(response)
 }
-
-// function Search (event) {
-//     event.preventDefault();
-//     console.log("clique")
-//     const keyword = "Gatos";
-//     Results(keyword); //GERA UM ERRO DE HOOS CAN ONLY BE CALLED INSED A BODY OF A FUNCTION
-// }
-
 
 /*
 
@@ -61,15 +32,18 @@ de proteger o codigo e devlver esse negocio apra a interface. sei lá como.
 
 
 //render lado da esquerda - entrada de dados
- export default function Keywords() {
+ export default function Keywords(props) {
 
-    const initialState = "ex.: Gatos"
-    const [searchTerm, setsearchTerm] = useState(initialState);
+    //condicao inicial campo de busca
+     const initialState = "ex.: Gatos"
+     const [searchTerm, setsearchTerm] = useState(initialState);
+     const [results, setResults] = useState("dados iniciais.");
 
-    function Search()
-    {
-        setsearchTerm("novo")
-        console.log ("cliquei no botao" , searchTerm)
+     function Search() {
+        setsearchTerm("novo") //buscar o valor do campo
+        setResults(Results("termo de pesquisa"))
+        //pegar o valor do campo e chamar o backend para buscar json
+        //lancar isso nos resultados
         return null
     }
 
@@ -122,7 +96,11 @@ de proteger o codigo e devlver esse negocio apra a interface. sei lá como.
                 </div>
             </div>
             {/* Coluna direita */}
-            <Results />
+            
+            <div className='col-md-9 p-3 border'>
+                <div className='h5'>Resultados</div>
+                <div className='mb-3'>{results}</div>
+            </div>
         </div>
     )
 }
