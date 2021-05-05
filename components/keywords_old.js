@@ -1,19 +1,49 @@
+import useSWR from 'swr'
 import {useState} from 'react'
-import dataExample from '../test_data/modelo_gatos.json'
+import fetchFBkeywords from '../services/graphapi'
 
-export default function Keywords(props) {
+
+//render lado da direita - resultados
+function Results() {
+
+    const keyword = "Keyword de teste"
+
+    const { response, isLoading, isError } = fetchFBkeywords(keyword)
+
+    if (isLoading) return "Buscando dados..."
+    if (isError) return "Houve um erro na solicitação"
+
+    return JSON.stringify(response)
+}
+
+/*
+
+USEI AS INSTRUCOES DO DESCHJAPS PARA CRIAR UM useState QUE ATUALIZA A VAR
+searchTerm com a funcoao setsearchTerm. Eu precis ochamar essa funcao cada
+vez qeu eu quiser atualizar a variavel.
+
+agora precisa ver como obter os dados de dentro do campo do formulario
+para poder usar em algum lugar. 
+
+Também pretendo colocar o buscador do facebook pra rodar server-side a fim
+de proteger o codigo e devlver esse negocio apra a interface. sei lá como.
+
+*/
+
+
+//render lado da esquerda - entrada de dados
+ export default function Keywords(props) {
 
     //condicao inicial campo de busca
      const initialState = "ex.: Gatos"
      const [searchTerm, setsearchTerm] = useState(initialState);
-
-     const modelGatos = dataExample;
-     const [FBTable, setFBTable] = useState(modelGatos);
+     const [results, setResults] = useState("dados iniciais.");
 
      function Search() {
-
-        setFBTable(FBTable)
-
+        setsearchTerm("novo") //buscar o valor do campo
+        setResults(Results("termo de pesquisa"))
+        //pegar o valor do campo e chamar o backend para buscar json
+        //lancar isso nos resultados
         return null
     }
 
@@ -21,7 +51,7 @@ export default function Keywords(props) {
         <div className="row">
             <div className='col-md-3 p-3 border'>
                 <div className='h5'>Busca</div>
-
+                {/* <form> */}
                     <div className='mb-3'>
                         <label htmlFor='fkeyword' className='form-label'>Interesse</label>
                         <input type='text' className='form-control' id='fkeyword' placeholder={searchTerm}
@@ -41,6 +71,7 @@ export default function Keywords(props) {
                     <div className='d-grid gap-2'>
                         <button onClick={Search} id='btnBuscar' className='btn btn-success'>Buscar</button>
                     </div>
+                {/* </form> */}
 
                 <div className='mb-3 pt-3'><hr /></div>
 
@@ -68,27 +99,7 @@ export default function Keywords(props) {
             
             <div className='col-md-9 p-3 border'>
                 <div className='h5'>Resultados</div>
-                <table className="table table-striped">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Palavra</th>
-                        <th scope="col">Audiência</th>
-                        <th scope="col">Categoria</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {/* keywords are inside '{data:...}' */}
-                    {FBTable.data.map((keyword) => (
-                        <tr>
-                            <input className="form-check-input" type="checkbox" value="" id="keyword.id"></input>
-                            <td>{keyword.name}</td>
-                            <td>{keyword.audience_size.toLocaleString()}</td>
-                            <td>{keyword.path.join(" | ")}</td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
+                <div className='mb-3'>{results}</div>
             </div>
         </div>
     )
